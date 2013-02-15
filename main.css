@@ -5,11 +5,12 @@ body {
 }
 
 h1 {
-  color: #aaa;
+  color: #ccc;
   font-family: Arial;
-  font-size: 75px;
+  font-size: 85px;
+  font-weight: 400;
   left: 10px;
-  letter-spacing: -2px;
+  letter-spacing: -5px;
   position: absolute;
   text-transform: uppercase;
   top: 10px;
