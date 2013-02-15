@@ -7,9 +7,9 @@ body {
 h1 {
   color: #aaa;
   font-family: Arial;
-  font-size: 55px;
+  font-size: 75px;
   left: 10px;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
   position: absolute;
   text-transform: uppercase;
   top: 10px;
