@@ -22,7 +22,6 @@
 
       canvas.addEventListener('touchstart', function (event) {
         for (var i = 0; i < event.touches.length; i ++) {
-          alert('touch position ', i);
           var touch = event.touches[i];
 
           var px = touch.pageX;
@@ -31,16 +30,35 @@
           ctx.beginPath();
           ctx.arc(px, py, 20, 0, 2 * Math.PI, true);
 
-          ctx.fillStyle = '#f00';
+          ctx.fillStyle = '#65a8e4';
           ctx.fill();
-          ctx.lineWidth = 2.0;
+          ctx.lineWidth = 5.0;
           ctx.strokeStyle = '#367dbc';
           ctx.stroke();
         }
       }, false);
 
-      canvas.addEventListener('touchmove', function () {}, false);
-      canvas.addEventListener('touchend', function () {}, false);
+      canvas.addEventListener('touchmove', function (event) {
+        for (var i = 0; i < event.touches.length; i ++) {
+          var touch = event.touches[i];
+
+          var px = touch.pageX;
+          var py = touch.pageY;
+
+          ctx.beginPath();
+          ctx.arc(px, py, 20, 0, 2 * Math.PI, true);
+
+          ctx.fillStyle = '#b9c7d3';
+          ctx.fill();
+          ctx.lineWidth = 2.0;
+          ctx.strokeStyle = '#899aaa';
+          ctx.stroke();
+        }
+      }, false);
+
+      canvas.addEventListener('touchend', function () {
+        ctx.clearRect(0, 0, 320, 450);
+      }, false);
     </script>
   </body>
 </html>
