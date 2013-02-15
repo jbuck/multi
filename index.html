@@ -15,13 +15,18 @@
       var canvas = document.getElementById('canvas');
       var ctx = canvas.getContext('2d');
 
+      // Stop mobile device from native scrolling away on the page
       document.body.addEventListener('touchmove', function (event) {
         event.preventDefault();
       }, false);
 
       canvas.addEventListener('touchstart', function (event) {
         for (var i = 0; i < event.touches.length; i ++) {
+          alert('touch position ', i);
           var touch = event.touches[i];
+
+          var px = touch.pageX;
+          var py = touch.pageY;
 
           ctx.beginPath();
           ctx.arc(px, py, 20, 0, 2 * Math.PI, true);
