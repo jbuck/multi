@@ -18,8 +18,8 @@
         scale = 1.0;
 
     document.addEventListener('gesturechange', function(event) {
-      rotation += event.rotation;
-      scale += event.scale;
+      rotation = event.rotation;
+      scale = event.scale;
 
       console.log("rotation: %d", rotation);
 
