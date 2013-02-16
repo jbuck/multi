@@ -21,8 +21,11 @@
       rotation += event.rotation;
       scale += event.scale;
 
+      console.log("rotation: %d", rotation);
+
       var output = document.getElementById('output');
-      output.style.transform = "rotate(" + rotation + "deg)";
+      output.style["-webkit-transform"] = "rotate(" + rotation + "deg)";
+      output.style["transform"] = "rotate(" + rotation + "deg)";
     });
 
     document.addEventListener('touchmove', function(event) {
