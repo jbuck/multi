@@ -27,6 +27,9 @@
       output.style["-moz-transform"] = "rotate(" + rotation + "deg)";
       output.style["-webkit-transform"] = "rotate(" + rotation + "deg)";
       output.style["transform"] = "rotate(" + rotation + "deg)";
+      output.style["-moz-transform"] = "scale(" + scale + ")";
+      output.style["-webkit-transform"] = "scale(" + scale + ")";
+      output.style["transform"] = "scale(" + scale + ")";
     });
 
     document.addEventListener('touchmove', function(event) {
