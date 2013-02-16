@@ -18,12 +18,13 @@
         scale = 1.0;
 
     document.addEventListener('gesturechange', function(event) {
-      rotation = event.rotation / 10;
+      rotation += event.rotation / 10;
       scale = event.scale;
 
       console.log("rotation: %d", rotation);
 
       var output = document.getElementById('output');
+      output.style["-moz-transform"] = "rotate(" + rotation + "deg)";
       output.style["-webkit-transform"] = "rotate(" + rotation + "deg)";
       output.style["transform"] = "rotate(" + rotation + "deg)";
     });
