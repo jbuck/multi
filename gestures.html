@@ -24,12 +24,9 @@
       console.log("rotation: %d", rotation);
 
       var output = document.getElementById('output');
-      output.style["-moz-transform"] = "rotate(" + rotation + "deg)";
-      output.style["-webkit-transform"] = "rotate(" + rotation + "deg)";
-      output.style["transform"] = "rotate(" + rotation + "deg)";
-      output.style["-moz-transform"] = "scale(" + scale + ")";
-      output.style["-webkit-transform"] = "scale(" + scale + ")";
-      output.style["transform"] = "scale(" + scale + ")";
+      output.style["-moz-transform"] = "rotate(" + rotation + "deg) scale(" + scale + ")";
+      output.style["-webkit-transform"] = "rotate(" + rotation + "deg) scale(" + scale + ")";
+      output.style["transform"] = "rotate(" + rotation + "deg) scale(" + scale + ")";
     });
 
     document.addEventListener('touchmove', function(event) {
